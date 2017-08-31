@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-less": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-clean": "",
+    "grunt-contrib-watch": "",
+    "grunt-text-replace": "",
+    "grunt-browser-sync": ""
+  }
+}

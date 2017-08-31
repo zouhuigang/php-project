@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+	<link href="public/static/css/bundle.css?rel=8e3a13" rel="stylesheet">
+	<script src="public/vendors/jquery/jquery-3.1.1.min.js"></script>
+	<script src="javascript/jquery.form.js"></script>
+	<script src="public/static/js/bundle.uncompressed.js?rel=8e3a13"></script>
+
+
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="page page-loading active">
+			<div class="loading-content">
+				<div class="logo">
+					<img src="public/static/img/logo-white.png">
+				</div>
+
+				<div class="bottle-wrap">
+					<div class="bottle">
+						<!-- <div class="bottle-bg">
+							<img src="public/static/img/bottle-bg.png">
+						</div> -->
+						<div class="bottle-content">
+							<img src="public/static/img/bottle-content.png">
+						</div>
+						<div class="bottle-mask">
+						</div>
+						<div class="bottle-label">
+							<img src="public/static/img/bottle-label.png">
+						</div>
+					</div>
+				</div>
+
+				<div class="loading-caption">
+					<h3>尽享法式风情</h3>
+					<h4>Taste the French Way of Life</h4>
+				</div>
+			</div>
+		</div>
+		<!-- end of page -->
+
+		<div class="page page-welcome active">
+			<div class="welcome">
+				<div class="welcome-1"></div>
+				<div class="welcome-2"></div>
+				<div class="welcome-3"></div>
+				<div class="welcome-4"></div>
+				<div class="welcome-5"></div>
+			</div>
+			<div class="welcome-content">
+				<p>
+					将一点法式风情<br>
+					融入你的生活瞬间<br>
+					和凯旋1664一起<br>
+					践行法式生活艺术<br>
+					上传你的法式Style<br>
+					共享这一席流动的视觉盛宴！
+				</p>
+			</div>
+			<a href="javascript:;" class="btn-close"><img src="public/static/img/close.png"></a>
+		</div>
+		<!-- end of page -->
+
+		<div class="page page-gallery active has-header has-footer">
+			<div class="page-hd">
+				<img src="public/static/img/logo.png">
+			</div>
+
+			<div class="page-bd">
+				<div class="gallery-list">
+					<div class="col-left">
+						<ul>
+							<?php foreach($list as $k=>$v){ ?>
+							<?php if($k%2==0){?>
+							<li>
+								<div class="gallery-item">
+									<div class="item-image">
+										<img src="<?php echo $v["imgurl"];?>">
+									</div>
+									<div class="item-content">
+										<div class="item-user">
+											<img src="<?php echo $v["photourl"];?>"> <?php echo $v["nickname"];?>
+										</div>
+										<p><?php echo $v["description"];?></p>
+									</div>
+								</div>
+							</li>
+							<?php }}?>
+						
+							
+						
+						</ul>
+					</div>
+
+					<div class="col-right">
+						<ul>
+							<?php foreach($list as $k=>$v){ ?>
+							<?php if($k%2==1){?>
+								<li>
+								<div class="gallery-item">
+									<div class="item-image">
+										<img src="<?php echo $v["imgurl"];?>">
+									</div>
+									<div class="item-content">
+										<div class="item-user">
+											<img src="<?php echo $v["photourl"];?>"> <?php echo $v["nickname"];?>
+										</div>
+										<p><?php echo $v["description"];?></p>
+									</div>
+								</div>
+							</li>
+							<?php }}?>
+
+						
+							
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- end of page -->
+
+		<div class="page page-upload has-header has-footer">
+			<div class="page-hd">
+				<img src="public/static/img/logo.png">
+			</div>
+
+			<div class="page-bd">
+				<div class="upload-box">
+					<div class="btn-upload">
+						<input type="file" name="" id="">
+						<div class="preview"></div>
+					</div>
+
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+
+					<button class="btn-submit">提交</button>
+				</div>
+			</div>
+		</div>
+		<!-- end of page -->
+
+		<div class="page page-designers has-header has-footer">
+			<div class="page-hd">
+				<img src="public/static/img/logo.png">
+			</div>
+
+			<div class="page-bd">
+				<div class="designer-list">
+					<ul>
+						<li>
+							<a href="javascript:;" class="designer-item" data-name="youxiaofan">
+								<div class="item-image">
+									<img src="public/static/img/youxiaofan.jpg">
+								</div>
+								<div class="item-content">
+									<h3>尤潇钒</h3>
+									<p>尤潇钒说K1664的清新果香让她充满想象…</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="designer-item" data-name="wangyingmiao">
+								<div class="item-image">
+									<img src="public/static/img/wangyingmiao.jpg">
+								</div>
+								<div class="item-content">
+									<h3>王映淼</h3>
+									<p>在映淼看来K1664是一款值得优雅品味的啤酒…</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="designer-item" data-name="wangyifei">
+								<div class="item-image">
+									<img src="public/static/img/wangyifei.jpg">
+								</div>
+								<div class="item-content">
+									<h3>王伊菲</h3>
+									<p>看到凯旋1664的时候，伊菲立刻联想到了巴黎。</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="designer-item" data-name="chenningyi">
+								<div class="item-image">
+									<img src="public/static/img/chenningyi.jpg">
+								</div>
+								<div class="item-content">
+									<h3>陈宁袆</h3>
+									<p>一场出其不意的相遇，让凯旋1664从此走进生活。</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="designer-item" data-name="yefangyu">
+								<div class="item-image">
+									<img src="public/static/img/yefangyu.jpg">
+								</div>
+								<div class="item-content">
+									<h3>叶舫妤</h3>
+									<p>流淌于平淡之上，细节处处透露出它的法式优雅。</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="designer-item" data-name="jinchenglei">
+								<div class="item-image">
+									<img src="public/static/img/jinchenglei.jpg">
+								</div>
+								<div class="item-content">
+									<h3>金成蕾</h3>
+									<p>K1664那份星夜一样深邃，自由，浪漫的蓝…</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- end of designers -->
+
+				<div class="designer" data-name="youxiaofan">
+					<div class="item-image">
+						<img src="public/static/img/youxiaofan.jpg">
+					</div>
+					<div class="item-content">
+						<h3>尤潇钒</h3>
+						<p>在潇钒口中，法式风情的关键字是“俏皮”，其实这也是她本人给我的感觉——一个像黄蓉一样的古灵精怪的女孩。</p>
+						<p> 在她看来巴黎的浪漫和优雅都是带着点俏皮，带着点灵气的，甚至还冒点气泡，法国人俏皮地优雅着，俏皮地慵懒着，俏皮地浪漫着……你绝对不会把法国和一本正经联系起来，因为法国是充满幻想的。</p>
+						<p>所以在她的设计中，潇钒用了很多气泡元素，为的是 展现出灵气又浪漫的样子。</p>
+						<p>潇钒说K1664的清新果香让她充满想象，让她不禁想着喝着K1664配着法国甜点的美妙滋味。</p>
+					</div>
+					<a href="javascript:;" class="btn-close"><img src="public/static/img/close.png"></a>
+				</div>
+				<!-- end of designer -->
+
+
+				<div class="designer" data-name="wangyingmiao">
+					<div class="item-image">
+						<img src="public/static/img/wangyingmiao.jpg">
+					</div>
+					<div class="item-content">
+						<h3>王映淼</h3>
+						<p>第一眼看映淼，我看到的是一个青春洋溢的女孩。但交流越是深入，我就越能感觉到她身上的低调的优雅。</p>
+						<p>她认为Coco Chanel是最能体现传统法式风情的一位伟大的设计师，这位大师曾经说过：“没有珍珠的女人，不算是女人。”在映淼看来这也是一种法式生活态度。她眼中的“法式风情”是一种低调的奢华，而且总是表达的比较含蓄。</p>
+						<p>所以在整体造型和材料选择上她选择了能够体现法式性感的乔其纱，体现“法式风情”中富于幻想和浪漫优雅的成分，另外两款服装上珍珠拉链和珍珠袖扣的设计都是想从细节中体现法式高雅。</p>
+						<p>在映淼看来K1664是一款值得优雅品味的啤酒， 能够让人通过味觉体验产生美好的幻想， 既有颜值又有内涵，值得细细品味。</p>
+					</div>
+					<a href="javascript:;" class="btn-close"><img src="public/static/img/close.png"></a>
+				</div>
+				<!-- end of designer -->
+
+
+				<div class="designer" data-name="wangyifei">
+					<div class="item-image">
+						<img src="public/static/img/wangyifei.jpg">
+					</div>
+					<div class="item-content">
+						<h3>王伊菲</h3>
+						<p>看到凯旋1664的时候，伊菲立刻联想到了巴黎。巴黎是一座拥有浪漫艺术气息和醇厚历史的城市，凯旋1664在她眼中也是如此。</p>
+						<p>
+							在接到这一命题时，王伊菲的脑海中马上浮现了 Eva Green 和 Sophie Marceau，伊菲对于法式生活的了解很大程度上来源于电影。在她的眼里，法式生活随性而舒适，但举手投足间却不经意地流露出优雅精致的气质。她决定运用这一元素，将本次作品的概念定义为：法国电影渗透于灵魂深处的浪漫与艺术情怀。
+						</p>
+						<p>
+							在女装与男装的设计中，伊菲将法式性格融入设计灵魂，希望展现法式风情中随性而不费力的优雅。在女装设计中，飘逸优雅的连衣裙，代表着法国女人的独立性格和高层次审美水准。在设计的过程中，她试图猜想 Amelie 和 Fanfan 会将怎样的连衣裙穿在身上呢？通过男装，伊菲希望展现法国男人天性中的浪漫、激情、活力和天马行空，她用服饰巧妙的衬托法国男人性格中的可爱之处。
+						</p>
+						<p>
+							看到凯旋1664的时候，伊菲立刻联想到了巴黎。巴黎是一座拥有浪漫艺术气息和醇厚历史的城市，凯旋1664在她眼中也是如此。这样一个代表着法式精致生活的品牌，令她忍不住想去探索。
+						</p>
+					</div>
+					<a href="javascript:;" class="btn-close"><img src="public/static/img/close.png"></a>
+				</div>
+				<!-- end of designer -->
+
+				<div class="designer" data-name="chenningyi">
+					<div class="item-image">
+						<img src="public/static/img/chenningyi.jpg">
+					</div>
+					<div class="item-content">
+						<h3>陈宁袆</h3>
+						<p>陈宁袆在本次设计中采用“味觉”作为设计主旋律，这一灵感来源于她对凯旋1664的初次体验。带有淡淡水果味的Rosé，在甜味渐去后留下爽口体验，这使她联想到了爽朗活力、不受拘束的年轻力量。在设计的过程中，她希望能将品牌具有青春气息、充满活力的一面表现出来。而 Blanc 经过反复酿造后诞生的混合味觉，使它带有一股若隐若现的清香气味，像标签一样牢牢锁进脑海。</p>
+
+						<p>在众多具有“法式风情”的时尚作品中，Dior 的创始人克里斯汀迪奥在1947年发布的第一个系列 New Look 带给宁袆最深印象。迪奥作品中对女性身体线条细致精细的展示，塑造了女人浪漫柔美的形象。在她的作品中，她同样巧妙借助线条带来的视觉影响，以此修饰女性笔直的躯干线条及纤细的腰身。
+						</p>
+						<p>味道有时可以装载感情，而有了感情则有了更多羁绊。一场出其不意的相遇，让凯旋1664从此走进生活。将所有美好或心碎的记忆，锁进味道的密匣，让每一口啤酒从此带上记忆，这也许就是巴黎生活或法式生活真正的情怀。</p>
+
+					</div>
+					<a href="javascript:;" class="btn-close"><img src="public/static/img/close.png"></a>
+				</div>
+				<!-- end of designer -->
+
+				<div class="designer" data-name="yefangyu">
+					<div class="item-image">
+						<img src="public/static/img/yefangyu.jpg">
+					</div>
+					<div class="item-content">
+						<h3>叶舫妤</h3>
+						<p>外表恬静的叶舫妤其实喜欢的是设计有着鲜明摇滚气质的Hedi Slimane。在问及灵感时候，电影《天使爱美丽》里面的Amelie是此次创作的“主角”。她回答说喜欢Amelie那种不管生活多平凡，都能活出乐趣的生活态度。在她眼里，这恰恰也是典型法国的生活态度。她希望能有机会拿着一瓶K1664，自由行走在巴黎街头，感受法兰西的腔调。</p>
+
+						<p>在面料的选择上，她的眼睛跟Amelie一样灵动的在捕捉各种面料的可能性，寻找隐藏在面料下面的乐趣。在和家人一起喝完K1664之后，K1664清新的柑橘香，甜爽的覆盆子香味刺激了她的感官。在活跃感官调配下，设计变得有滋又有味。</p>
+
+						<p>流淌于平淡之上，细节处处透露出它的法式优雅。K1664在告诉你，如何在平淡生活之外，出露出细致与典雅。这不受限于巴黎，可以是任何地点，任何时间。</p>
+
+					</div>
+					<a href="javascript:;" class="btn-close"><img src="public/static/img/close.png"></a>
+				</div>
+				<!-- end of designer -->
+
+				<div class="designer" data-name="jinchenglei">
+					<div class="item-image">
+						<img src="public/static/img/jinchenglei.jpg">
+					</div>
+					<div class="item-content">
+						<h3>金成蕾</h3>
+
+						<p>K1664那份星夜一样深邃，自由，浪漫的蓝让金成蕾着迷。而Yves Klein蓝色灵感的采用赋予了整个命题更深层次的含义。自由与生命，大部分人生活的永恒使命。如果把K1664比做生活，那每一个个个体即可能是啤酒花本身，也可能是柑橘，覆盆子，在一次又一次的发酵过程之中释放生命力。</p>
+
+						<p>深邃的蓝，炙热的红，在廓形温柔的形态中碰撞，寻找一种和谐感。柑橘与啤酒花，覆盆子与啤酒花之间的交融之后，是环绕舌尖的酒香。略带中性的男装设计更是发散了自由与生命命题的可能性。</p>
+
+						<p>标志性的蓝瓶设计，代表了K1664的一种可能性，一份自由。相信每个人也会像金成蕾一样，对着这一份自由持之以恒，不懈的奋斗。</p>
+
+
+						<p>K1664那份星夜一样深邃，自由，浪漫的蓝让金成蕾着迷。而Yves Klein蓝色灵感的采用赋予了整个命题更深层次的含义。自由与生命，大部分人生活的永恒使命。如果把K1664比做生活，那每一个个个体即可能是啤酒花本身，也可能是柑橘，覆盆子，在一次又一次的发酵过程之中释放生命力。</p>
+
+						<p>深邃的蓝，炙热的红，在廓形温柔的形态中碰撞，寻找一种和谐感。柑橘与啤酒花，覆盆子与啤酒花之间的交融之后，是环绕舌尖的酒香。略带中性的男装设计更是发散了自由与生命命题的可能性。</p>
+
+						<p>标志性的蓝瓶设计，代表了K1664的一种可能性，一份自由。相信每个人也会像金成蕾一样，对着这一份自由持之以恒，不懈的奋斗。</p>
+
+					</div>
+					<a href="javascript:;" class="btn-close"><img src="public/static/img/close.png"></a>
+				</div>
+				<!-- end of designer -->
+
+
+			</div>
+		</div>
+		<!-- end of page -->
+
+
+		<div class="page page-event has-header has-footer">
+			<div class="page-hd">
+				<img src="public/static/img/logo.png">
+			</div>
+
+			<div class="page-bd">
+				<div class="event">
+					<div class="event-map">
+						<img src="public/static/img/map.png">
+					</div>
+
+					<div class="event-content">
+						<h3>地址：上海建业里</h3>
+						<p><em>活动日期：9月15号</em></p>
+						<p>
+							光影流转，舌尖美味，K1664定制时装，中国第一代国际名模，
+							Comme Moi的创始人吕燕，更有K1664 神秘口味新品发
+							布！你，心动了吗？
+						</p>
+						<p>
+							上传你的法式Style 并分享至朋友圈，就有机会赢取K1664法式派对的1+1 活动名额。
+						</p>
+
+						<p>
+							9月15日18:30 <br>
+							来上海建业里嘉佩乐酒店（上海市徐汇区建国西路480号）<br>
+							跟我们一起尽享法式风情！
+
+						</p>
+						<p>
+							Dress Code: 法式优雅
+						</p>
+					</div>
+				</div>
+				<!-- end of designer -->
+			</div>
+		</div>
+		<!-- end of page -->
+
+		<form enctype="multipart/form-data" id="form1" method="post" action="">
+		<div class="popup-submit">
+			<!-- <div class="popup-backdrop"></div> -->
+			<div class="popup-content">
+ 			
+				<ul>
+					<li class="preview">
+					     <img id="preview" src="<?php echo $headimgurl;?>">
+						 <!--<input type="file">-->
+					</li>
+					<input type="hidden" name="imgid" id="imgid" value="">
+					<input type="hidden" name="photoid" id="photoid" value="<?php echo $headid;?>">
+					<input type="hidden" name="nickname" id="nickname" value="<?php echo $nickname;?>">
+					<li class="description">
+						<textarea name="description" id="description" cols="30" rows="10"></textarea>
+					</li>
+					<li class="phone">
+						<p>联系方式还是要留的，<br>万一我们想邀请你去活动现场呢？</p>
+						<input type="text" name="mobile" id="mobile" placeholder="+86">
+					</li>
+				
+
+					<li>
+					<!--share.html-->
+						<a href="javascript:;" class="btn-submit">提交</a>
+					</li>
+				</ul>
+		    	
+
+				<div class="btn-close">
+					<img src="public/static/img/close.png">
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="tabs">
+			<ul>
+				<li><a href="javascript:;" class="tab active" data-page="gallery">法式瞬间</a></li>
+				<li><input type="file"  name="photo"  id="upload-from-tab"><a href="javascript:;" class="tab-upload" data-page="upload">上传优雅</a></li>
+				<li><a href="javascript:;" class="tab" data-page="designers">新锐设计</a></li>
+				<li><a href="javascript:;" class="tab" data-page="event">时尚派对</a></li>
+			</ul>
+		</div>
+		</form>
+		<!-- end of page -->
+		
+		<div class="backdrop"></div>
+
+	</div>
+
+<!--微信分享-->
+<?php $this->load->view('wxshare/share.html')?>
+<!--微信分享-->
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "HYRunYuan-55W";
+    src: url("HYRunYuan-55W.eot"); /* IE9 */
+    src: url("HYRunYuan-55W.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("HYRunYuan-55W.woff") format("woff"), /* chrome、firefox */
+    url("HYRunYuan-55W.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("HYRunYuan-55W.svg#HYRunYuan-55W") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

@@ -1,0 +1,99 @@
+.page-loading {
+	background: #004C9E;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	display: none;
+
+	&.active {
+		display: flex;
+	}
+
+	.loading-content {
+		width: 100%;
+	}
+
+	.logo {
+		margin-bottom: 10vh;
+		text-align: center;
+		img {
+			width: 70%;
+			max-width: 280px;
+		}
+	}
+
+	.bottle-wrap {
+		margin-bottom: 10vh;
+		opacity: 0;
+		transition: opacity .3s ease;
+		pointer-events: none; 
+		&.active {
+			opacity: 1;
+		}
+	}
+
+	.bottle {
+		position: relative;
+		width: 62px;
+		height: 219px;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+		}
+		.bottle-bg,
+		.bottle-content,
+		.bottle-label,
+		.bottle-mask {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.bottle-mask {
+			background: url(../img/wave.png) 0 bottom repeat;
+			background-size: 50px 1000px;
+			width: 100%;
+			height: 100%;
+			-webkit-animation-name: movebg;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-iteration-count: infinite;
+		}
+	}
+
+	.loading-caption {
+		padding: 0px 20px;
+		text-align: center;
+		h3 {
+			color: #fff;
+			font-weight: normal;
+			font-size: 17px;
+			font-family: 'kronenbourg_1664italic', 'HYRunYuan';
+		}
+
+		h4 {
+			color: #fff;
+			font-size: 17px;
+			font-weight: normal;
+			font-family: 'kronenbourg_1664italic', 'HYRunYuan';
+		}
+	}
+
+}
+
+
+@-webkit-keyframes movebg {
+	from {
+		background-position-x: 0;
+	}
+	to { 
+		background-position-x: -100px;
+	}
+}
+
+
+

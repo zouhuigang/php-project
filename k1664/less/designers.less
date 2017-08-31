@@ -1,0 +1,131 @@
+.page-designers {
+
+	// .designer-list {
+	// 	&.freezed {
+	// 		pointer-events: none;
+	// 	}
+	// }
+
+	ul {
+		padding-top: 20px;
+		.cf();
+		li {
+			width: 48%;
+			margin-bottom: 30px;
+			&:nth-child(even) {
+				float: left;
+				.designer-item .item-image {
+					background: url(../img/pattern-3.png) center center no-repeat;
+					background-size: contain;
+					padding-right: 15px;
+					padding-bottom: 15px;
+				}
+			}
+			&:nth-child(odd) {
+				float: right;
+				.designer-item .item-image {
+					background: url(../img/pattern-4.png) center center no-repeat;
+					background-size: contain;
+					padding-left: 15px;
+					padding-bottom: 15px;
+					padding-top: 15px;
+				}
+			}
+
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+		}
+	}
+
+	.designer-item {
+		display: block;
+		text-decoration: none;
+		color: #666;
+
+		.item-image {
+			
+		}
+
+		.item-content {
+			padding: 5px;
+			h3 {
+				margin: 0;
+				color: @blue;
+				border-bottom: 2px solid @red;
+				margin-bottom: 10px;
+			}
+
+			p {
+				padding-left: 10px;
+				margin: 0;
+			}
+		}
+	}
+	position: fixed;
+	// pointer-events: none;
+	
+}
+
+.designer {
+	position: fixed;
+	background: #fff;
+	left: 0;
+	top: 0px;
+	padding-top: 95px;
+	opacity: 0;
+	pointer-events: none;
+	transform: translate3d(0, 100px, 0);
+	transition: all .5s ease;
+	width: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+		transform: translate3d(0, 0px, 0);
+	}
+
+	.item-image {
+		width: 86%;
+		background: url(../img/pattern-3.png) center center no-repeat;
+		background-size: contain;
+		padding-right: 20px;
+		padding-bottom: 20px;
+	}
+
+	.item-content {
+		padding: 20px;
+		padding-right: 40px;
+		padding-bottom: 50px;
+		padding-left: 40px;
+		background: url(../img/pattern-2.png) -50px 50px no-repeat;
+		background-size: 91px 225px;
+		h3 {
+			margin: 0;
+			color: @blue;
+			border-bottom: 2px solid @red;
+			margin-bottom: 16px;
+			max-width: 40%;
+		}
+
+		p {
+			padding-left: 20px;
+			margin-bottom: 20px;
+			color: #777;
+			line-height: 1.8;
+		}
+	}
+
+	.btn-close {
+		position: fixed;
+		top: 80px;
+		right: 20px;
+		z-index: 99;
+		img {
+			width: 20px;
+		}
+	}
+}

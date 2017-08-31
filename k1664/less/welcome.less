@@ -1,0 +1,206 @@
+.page-welcome {
+	// background: url(../img/welcome.jpg) center bottom no-repeat;
+	background: #fff;
+	background-size: cover;
+	z-index: 9998;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+
+	background: url(../img/welcome-new.jpg) center bottom no-repeat;
+	background-size: cover;
+
+	.welcome-bd {
+		position: fixed;
+		top: 50vh;
+		ul {
+			position: relative;
+			left: 30vw;
+			li {
+				font-size: 15px;
+				font-weight: normal;
+				font-family: 'kronenbourg_1664italic', 'HYRunYuan';
+				opacity: 0;
+				color: @blue;
+				line-height: 1.7;
+				&:nth-child(1) {
+					position: relative;
+					left: 10vw;
+					transition: opacity 3s ease .5s;
+				}
+				&:nth-child(2) {
+					position: relative;
+					left: 15vw;
+					transition: opacity 3s ease 1s;
+				}
+				&:nth-child(3) {
+					position: relative;
+					left: 10vw;
+					transition: opacity 3s ease 1.5s;
+				}
+				&:nth-child(4) {
+					position: relative;
+					left: 0vw;
+					transition: opacity 3s ease 2s;
+				}
+				&:nth-child(5) {
+					position: relative;
+					left: 15vw;
+					transition: opacity 3s ease 2.5s;
+				}
+				&:nth-child(6) {
+					position: relative;
+					left: 3vw;
+					transition: opacity 3s ease 3s;
+				}
+			}
+
+			&.show {
+				li {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.welcome-ft {
+		height: 15vh;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+
+		.button-start {
+			opacity: 0;
+			padding: 8px 20px;
+			text-align: center;
+			min-width: 180px;
+			color: #fff;
+			border: 1px solid #fff;
+			transition: opacity 1s ease 4s;
+			opacity: 0;
+			pointer-events: none;
+			&.show {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	
+
+	.welcome {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+
+		> div {
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			opacity: 0;
+		}
+
+		.welcome-1 {
+			background: url(../img/welcome-new.jpg) center bottom no-repeat;
+			background-size: cover;
+		}
+
+		.welcome-2 {
+			background: url(../img/welcome-2.png) center bottom no-repeat;
+			background-size: cover;
+		}
+
+		.welcome-3 {
+			background: url(../img/welcome-3.png) center bottom no-repeat;
+			background-size: cover;
+		}
+
+		.welcome-4 {
+			background: url(../img/welcome-4.png) center bottom no-repeat;
+			background-size: cover;
+		}
+
+		.welcome-5 {
+			background: url(../img/welcome.png) center bottom no-repeat;
+			background-size: cover;
+		}
+
+		&.show {
+			.welcome-1 {
+				opacity: 1;
+				transition: opacity 1.5s ease .2s;
+			}
+
+			.welcome-5 {
+				opacity: 1;
+				transition: opacity 1.5s ease .2s;
+			}
+
+			.welcome-2 {
+				opacity: 1;
+				transition: opacity 1.5s ease 2s;
+			}
+
+			.welcome-3 {
+				opacity: 1;
+				transition: opacity 1.5s ease 3s;
+			}
+
+			.welcome-4 {
+				opacity: 1;
+				transition: opacity 1.5s ease 4s;
+			}
+
+			
+		}
+	}
+
+	.welcome-content {
+		position: absolute;
+		left: 25px;
+		bottom: 15px;
+		color: #fff;
+		max-width: 55%;
+
+		h3 {
+			font-size: 16px;
+			margin: 0;
+			margin-bottom: 2px;
+			font-weight: normal;
+			font-family: 'kronenbourg_1664italic', 'HYRunYuan';
+		}
+
+		h4 {
+			font-size: 15px;
+			font-weight: normal;
+			margin: 0;
+			margin-bottom: 4px;
+			font-family: 'kronenbourg_1664italic', 'HYRunYuan';
+		}
+
+		p {
+			font-size: 13px;
+			margin: 0;
+			line-height: 1.6;
+		}
+	}
+
+	.btn-close {
+		position: absolute;
+		top: 30px;
+		left: 25px;
+		img {
+			width: 20px;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+//Variables
+@blue: #004587;
+@red: #FF0000;
+
+//Utilities
+.none {
+	display: none;
+}
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+.cf:after {
+  clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+.tleft {
+  text-align: left;
+}
+
+.tright {
+  text-align: right;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+
+//Mixins
+// Clearfix
+// --------
+.cf() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// inline-block
+// ----------------
+.inline-block() {
+  display: inline-block;
+  *display: inline; /* IE7 inline-block hack */
+  *zoom: 1;
+}
+
+// Size
+// ----------------
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+// Disable user select text
+// ----------------
+.disable-user-select() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
